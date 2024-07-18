@@ -1,8 +1,9 @@
 <nav class="navbar-vertical navbar">
     <div id="myScrollableElement" class="h-screen" data-simplebar>
         <!-- brand logo -->
-        <a class="navbar-brand" href="{{ route('dashboard') }}">
-            <img src="{{ asset('assets/images/brand/logo/logo.svg') }}" alt="" />
+        <a class="navbar-brand flex gap-3 items-center justify-center text-white text-lg font-bold" href="{{ route('dashboard') }}">
+            <img src="{{ asset('assets/logo/logo-square.png') }}" class="inline" alt="" />
+            <p class="inline pt-2">INKALINK</p>
         </a>
 
         <!-- navbar nav -->
