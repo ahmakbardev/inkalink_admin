@@ -36,4 +36,4 @@ jobs:
             php artisan route:clear
             php artisan config:cache
             php artisan optimize
-            ln -s /home/u128493830/domains/inkalink.fun/inkalink_admin/public /home/u982131153/domains/inkalink.fun/public_html/admin
+            ln -s /home/u128493830/domains/inkalink.fun/inkalink_admin/public /home/u128493830/domains/inkalink.fun/public_html/admin
