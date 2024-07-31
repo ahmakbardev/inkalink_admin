@@ -32,6 +32,7 @@ jobs:
             git pull
             composer install
             composer update
+            php artisan storage:link
             php artisan key:generate
             php artisan route:clear
             php artisan config:cache
