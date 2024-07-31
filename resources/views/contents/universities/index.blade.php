@@ -16,8 +16,8 @@
                         <tr>
                             <th scope="col" class="px-6 py-3">No</th>
                             <th scope="col" class="px-6 py-3">Nama Universitas</th>
-                            <th scope="col" class="px-6 py-3">Nama Jurusan</th>
-                            <th scope="col" class="px-6 py-3">Nilai RNM</th>
+                            {{-- <th scope="col" class="px-6 py-3">Nama Jurusan</th> --}}
+                            {{-- <th scope="col" class="px-6 py-3">Nilai RNM</th> --}}
                             <th scope="col" class="px-6 py-3">Aksi</th>
                         </tr>
                     </thead>
@@ -35,10 +35,10 @@
                                 <tr>
                                     <td class="border-b border-gray-300 py-3 px-6">{{ $loop->iteration }}</td>
                                     <td class="border-b border-gray-300 py-3 px-6">{{ $university->nama_universitas }}</td>
-                                    <td class="border-b border-gray-300 py-3 px-6">
-                                        {{ $group->pluck('nama_jurusan')->join(', ') }}</td>
-                                    <td class="border-b border-gray-300 py-3 px-6">
-                                        {{ $group->pluck('nilai_rnm')->join(', ') }}</td>
+                                    {{-- <td class="border-b border-gray-300 py-3 px-6">
+                                        {{ $group->pluck('nama_jurusan')->join(', ') }}</td> --}}
+                                    {{-- <td class="border-b border-gray-300 py-3 px-6">
+                                        {{ $group->pluck('nilai_rnm')->join(', ') }}</td> --}}
                                     <td class="border-b border-gray-300 py-3 px-6">
                                         <a href="{{ route('universities.edit', $university->id) }}"
                                             class="inline-flex items-center gap-x-2 bg-indigo-600 text-white border-indigo-600 rounded hover:bg-indigo-800 hover:border-indigo-800 active:bg-indigo-800 active:border-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 aspect-square transition-all ease-in-out px-3 py-1">

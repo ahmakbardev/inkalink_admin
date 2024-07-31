@@ -50,6 +50,9 @@
                                             RNM</label>
                                         <input type="file" id="gambar_rnm_{{ $index + 1 }}" name="gambar_rnm[]"
                                             class="border border-gray-300 text-gray-900 rounded focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2 px-3" />
+                                        <img id="preview_gambar_rnm_{{ $index + 1 }}"
+                                            src="{{ $uni->gambar_rnm ? asset('storage/' . $uni->gambar_rnm) : '' }}"
+                                            class="mt-3 w-32 h-32 object-cover" />
                                     </div>
                                     <!-- Nama Jurusan Input -->
                                     <div class="mb-6">
@@ -266,6 +269,7 @@
                 <label for="gambar_rnm_${tabCount}" class="mb-2 block text-gray-800">Gambar RNM</label>
                 <input type="file" id="gambar_rnm_${tabCount}" name="gambar_rnm[]"
                        class="border border-gray-300 text-gray-900 rounded focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2 px-3" />
+                <img id="preview_gambar_rnm_${tabCount}" class="mt-3 w-32 h-32 object-cover" />
             </div>
             <div class="mb-6">
                 <label for="nama_jurusan_${tabCount}" class="mb-2 block text-gray-800">Nama Jurusan</label>
@@ -330,6 +334,21 @@
                 tabNav.firstChild.textContent = input.value || `Passing Grade #${tabId.split('-')[2]}`;
             }
 
+            $('input[type="file"]').change(function(e) {
+                const inputId = $(this).attr('id');
+                const index = inputId.split('_')[2];
+                const previewId = `#preview_gambar_rnm_${index}`;
+
+                const file = e.target.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $(previewId).attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(file);
+            });
+
             function activateTab(tabId) {
                 const tabContents = document.querySelectorAll('.tab-content');
                 tabContents.forEach(tabContent => tabContent.style.display = 'none');
@@ -349,6 +368,7 @@
                 }
             }
 
+            // Ensure only the first tab content is visible on page load
             activateTab('data-universitas');
         });
     </script>
