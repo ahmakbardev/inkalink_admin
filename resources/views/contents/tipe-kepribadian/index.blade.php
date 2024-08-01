@@ -39,7 +39,7 @@
                                     </td>
                                     <td class="border-b border-gray-300 py-3 px-6">
                                         @if ($type->image)
-                                            <img src="{{ Storage::url($type->image) }}" alt="Image"
+                                            <img src="{{ asset( 'storage/'.$type->image) }}" alt="Image"
                                                 class="w-20 h-20 rounded">
                                         @else
                                             No Image
