@@ -32,8 +32,10 @@ jobs:
             git pull
             composer install
             composer update
+            php artisan storage:link
             php artisan key:generate
             php artisan route:clear
             php artisan config:cache
             php artisan optimize
+            ln -s /home/u128493830/domains/inkalink.fun/inkalink_admin/public/storage/* /home/u128493830/domains/inkalink.fun/public_html/storage
             ln -s /home/u128493830/domains/inkalink.fun/inkalink_admin/public/* /home/u128493830/domains/inkalink.fun/public_html/admin
