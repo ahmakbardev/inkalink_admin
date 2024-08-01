@@ -1,6 +1,6 @@
 <div class="header">
     <!-- navbar -->
-    <nav class="bg-white px-6 py-[10px] flex items-center justify-between shadow-sm">
+    <nav class="bg-white px-6 py-[15px] flex items-center justify-between shadow-sm">
         <a id="nav-toggle" href="#" class="text-gray-800">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
@@ -60,7 +60,7 @@
 
         </div>
         <!-- navbar nav -->
-        <ul class="flex ml-auto items-center">
+        {{-- <ul class="flex ml-auto items-center">
             <li class="dropdown stopevent mr-2">
                 <a class="text-gray-600" href="#" role="button" id="dropdownNotification"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -185,6 +185,6 @@
                     </ul>
                 </div>
             </li>
-        </ul>
+        </ul> --}}
     </nav>
 </div>
