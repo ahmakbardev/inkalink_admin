@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\JournalKarirController;
 use App\Http\Controllers\PersonalityTypeController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ResultController;
@@ -38,3 +39,5 @@ Route::resource('questions', QuestionController::class);
 Route::resource('results', ResultController::class);
 
 Route::resource('universities', UniversityController::class);
+Route::resource('jurnalkarir', JournalKarirController::class);
+

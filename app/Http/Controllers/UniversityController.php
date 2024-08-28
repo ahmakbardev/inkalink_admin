@@ -29,6 +29,7 @@ class UniversityController extends Controller
             'url_info_pendaftaran.*' => 'nullable|url',
             'url_info_passinggrade.*' => 'nullable|url',
             'url_biaya_pendidikan.*' => 'nullable|url',
+            'description.*' => 'nullable|string',
         ]);
 
         foreach ($request->nama_jurusan as $index => $nama_jurusan) {
@@ -39,8 +40,10 @@ class UniversityController extends Controller
                 'url_info_pendaftaran' => $request->url_info_pendaftaran[$index] ?? null,
                 'url_info_passinggrade' => $request->url_info_passinggrade[$index] ?? null,
                 'url_biaya_pendidikan' => $request->url_biaya_pendidikan[$index] ?? null,
+                'description' => $request->description[$index] ?? null,
             ];
 
+            // Simpan gambar jika ada
             if ($request->hasFile('gambar_rnm.' . $index)) {
                 $data['gambar_rnm'] = $request->file('gambar_rnm.' . $index)->store('public/universities');
             }
@@ -70,6 +73,7 @@ class UniversityController extends Controller
             'url_info_pendaftaran.*' => 'nullable|url',
             'url_info_passinggrade.*' => 'nullable|url',
             'url_biaya_pendidikan.*' => 'nullable|url',
+            'description.*' => 'nullable|string',
         ]);
 
         $university = University::findOrFail($id);
@@ -92,6 +96,7 @@ class UniversityController extends Controller
                 'url_info_pendaftaran' => $request->url_info_pendaftaran[$index] ?? null,
                 'url_info_passinggrade' => $request->url_info_passinggrade[$index] ?? null,
                 'url_biaya_pendidikan' => $request->url_biaya_pendidikan[$index] ?? null,
+                'description' => $request->description[$index] ?? null,
             ];
 
             if ($request->hasFile('gambar_rnm.' . $index)) {

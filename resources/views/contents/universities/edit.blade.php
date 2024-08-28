@@ -103,6 +103,14 @@
                                             placeholder="URL Biaya Pendidikan"
                                             value="{{ old('url_biaya_pendidikan.' . $index, $uni->url_biaya_pendidikan) }}" />
                                     </div>
+                                    <!-- Deskripsi Jurusan Textarea -->
+                                    <div class="mb-6">
+                                        <label for="description_{{ $index + 1 }}"
+                                            class="mb-2 block text-gray-800">Deskripsi Jurusan</label>
+                                        <textarea id="description_{{ $index + 1 }}" name="description[]" rows="4"
+                                            class="border border-gray-300 text-gray-900 rounded focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2 px-3"
+                                            placeholder="Deskripsi Jurusan">{{ old('description.' . $index, $uni->description) }}</textarea>
+                                    </div>
                                     <input type="hidden" name="university_ids[]" value="{{ $uni->id }}">
                                 </div>
                             @endforeach
@@ -301,6 +309,13 @@
                 <input type="url" id="url_biaya_pendidikan_${tabCount}" name="url_biaya_pendidikan[]"
                        class="border border-gray-300 text-gray-900 rounded focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2 px-3"
                        placeholder="URL Biaya Pendidikan" />
+            </div>
+            <!-- Deskripsi Jurusan Textarea -->
+            <div class="mb-6">
+                <label for="description_${tabCount}" class="mb-2 block text-gray-800">Deskripsi Jurusan</label>
+                <textarea id="description_${tabCount}" name="description[]" rows="4"
+                        class="border border-gray-300 text-gray-900 rounded focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2 px-3"
+                        placeholder="Deskripsi Jurusan"></textarea>
             </div>`;
 
                 tabsContent.appendChild(newTabContent);

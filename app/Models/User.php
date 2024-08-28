@@ -42,4 +42,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    // Relasi dengan JournalEntry
+    public function journalEntries()
+    {
+        return $this->hasMany(JournalEntry::class);
+    }
 }

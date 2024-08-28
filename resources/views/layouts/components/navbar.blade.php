@@ -1,7 +1,8 @@
 <nav class="navbar-vertical navbar">
     <div id="myScrollableElement" class="h-screen" data-simplebar>
         <!-- brand logo -->
-        <a class="navbar-brand flex gap-3 items-center justify-center text-white text-lg font-bold" href="{{ route('dashboard') }}">
+        <a class="navbar-brand flex gap-3 items-center justify-center text-white text-lg font-bold"
+            href="{{ route('dashboard') }}">
             <img src="{{ asset('assets/logo/logo-square.png') }}" class="inline" alt="" />
             <p class="inline pt-2">INKALINK</p>
         </a>
@@ -61,6 +62,14 @@
                         <!-- More links can be added here -->
                     </ul>
                 </div>
+            </li>
+            <!-- jurnalkarir link -->
+            <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('jurnalkarir.*') ? 'active' : '' }}"
+                    href="{{ route('jurnalkarir.index') }}">
+                    <i data-feather="layers" class="w-4 h-4 mr-2"></i>
+                    Jurnal Karir
+                </a>
             </li>
 
 

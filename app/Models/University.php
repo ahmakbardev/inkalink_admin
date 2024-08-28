@@ -10,6 +10,7 @@ class University extends Model
     use HasFactory;
 
     protected $fillable = [
+        'description',
         'nama_universitas',
         'gambar_rnm', // ubah dari gambar_RNM ke gambar_rnm
         'nama_jurusan',
