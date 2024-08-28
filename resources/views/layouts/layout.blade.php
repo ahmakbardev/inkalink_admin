@@ -10,7 +10,10 @@
         content="Dash UI - TailwindCSS HTML Admin Template Free and open-source Github, provides developers with everything need to create Web Application & Kick start project" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/logo/logo-square.png') }}" />
     @include('layouts.components.assets')
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <!-- Append version number to CSS file name -->
+    <link rel="stylesheet" href="{{ asset('css/app.css?v=1.06') }}">
+    <!-- Add cache-control headers for CSS and JavaScript files -->
+    <link rel="preload" href="{{ asset('css/app.css?v=1.06') }}" as="style" crossorigin="anonymous" />
 
     <title>INKALINK Admin</title>
 </head>
